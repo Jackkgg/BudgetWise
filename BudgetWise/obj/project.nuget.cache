@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "VOOnzP2J27yRto+6141SxiAVef2MQdyH7XmRUDWKfzRmu6A0jj2FmylWbM+WjEfIBlkg946OpojLhQ8KHVcHFQ==",
+  "dgSpecHash": "0bX6ymgMmHWnijT4Vej5Ordbmbf6n1tOFnMFjxXRemi711VVw95Gkw+nz52/IkWBVkf2ywg9Ad6Mysba2yQDDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jackc\\source\\repos\\BudgetWise\\BudgetWise\\BudgetWise.csproj",
+  "projectFilePath": "C:\\Work\\University\\BudgetWise\\BudgetWise\\BudgetWise.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jackc\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\jackc\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\jackc\\.nuget\\packages\\googleauthenticator\\3.2.0\\googleauthenticator.3.2.0.nupkg.sha512",
     "C:\\Users\\jackc\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\jackc\\.nuget\\packages\\konscious.security.cryptography.argon2\\1.3.0\\konscious.security.cryptography.argon2.1.3.0.nupkg.sha512",
     "C:\\Users\\jackc\\.nuget\\packages\\konscious.security.cryptography.blake2\\1.1.0\\konscious.security.cryptography.blake2.1.1.0.nupkg.sha512",
@@ -49,6 +50,7 @@
     "C:\\Users\\jackc\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35\\microsoft.web.webview2.1.0.864.35.nupkg.sha512",
     "C:\\Users\\jackc\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\jackc\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\jackc\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
     "C:\\Users\\jackc\\.nuget\\packages\\realtaiizor\\3.8.0.5\\realtaiizor.3.8.0.5.nupkg.sha512",
     "C:\\Users\\jackc\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\jackc\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",

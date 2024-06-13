@@ -14,6 +14,7 @@ namespace BudgetWise.Models.PersonalUser
         public string Username { get; set; }
         public string Password { get; set; }
         public string Salt { get; set; }
+        public string AuthSecret {  get; set; }
         public UserProfile Profile { get; set; }
     }
 }

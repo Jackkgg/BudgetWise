@@ -11,5 +11,7 @@ namespace BudgetWise.Interfaces
     {
         bool PersonalSignUp(PersonalAccount personalAccount);
         bool PersonalLogin(string username, string password);
+        void AddAuthKey(string secretKey, string username);
+        string GetAuthKeyForUser(string username);
     }
 }

@@ -4,6 +4,7 @@ using BudgetWise.Models.PersonalUser;
 using BudgetWise.Repositories;
 using BudgetWise.Security;
 using BudgetWise.Security.Algorithms;
+using BudgetWise.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,16 +63,19 @@ namespace BudgetWise.Forms
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtPassword.Text))
+                return;
+            if (!ValidateInput(txtEmailAddress.Text, txtPhoneNumber.Text, txtPassword.Text))
+                return;
+
             var hashedInfo = _hashing.Hash(txtPassword.Text);
-
-
             var account = new PersonalAccount
             {
                 Username = txtUsername.Text,
                 Password = hashedInfo.Item1,
                 Salt = hashedInfo.Item2,
+                AuthSecret = string.Empty //I need the account creating so I can add the secret later, maybe add a secrets table tbh
             };
-
             var profile = new UserProfile
             {
                 Username = account.Username,
@@ -81,17 +85,33 @@ namespace BudgetWise.Forms
                 Email = txtEmailAddress.Text,
                 DateOfBirth = SetDateOfBirth(),
             };
-
             account.Profile = profile;
 
+            //Username is checked as part of sign up
             if (!_personalUserRepository.PersonalSignUp(account))
             {
                 label15.Visible = true;
                 return;
             }
 
+            Authentication authentication = new Authentication(_personalUserRepository);
+            authentication.AddKeyOnSignUp(account.Username);
+
             this.Close();
             _login.Show();
+        }
+
+        private bool ValidateInput(string email, string phone, string password)
+        {
+            ValidationLibrary validationLibrary = new ValidationLibrary();
+            if (!validationLibrary.IsValidEmail(email))
+                return false;
+            if(!validationLibrary.isValidTelephone(phone))
+                return false;
+            if(!validationLibrary.isValidPassword(password))
+                return false;
+
+            return true;
         }
 
         private DateTime SetDateOfBirth()
@@ -101,7 +121,7 @@ namespace BudgetWise.Forms
             string year = cmbYear.Text;
 
             string date = $"{day} {month} {year}";
-            DateTime dateOfBirth = DateTime.ParseExact(date, "dd MMMM yyyy", CultureInfo.InvariantCulture);
+            DateTime dateOfBirth = DateTime.ParseExact(date, "d MMMM yyyy", CultureInfo.InvariantCulture);
 
             return dateOfBirth.Date;
         }

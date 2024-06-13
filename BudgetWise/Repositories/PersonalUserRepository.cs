@@ -47,5 +47,25 @@ namespace BudgetWise.Repositories
             
             return account.Password == passHash;           
         }
+
+        public void AddAuthKey(string secretKey, string username)
+        {
+            var user = _context.PersonalAccounts.SingleOrDefault(a => a.Username == username);
+            if (user != null)
+            {
+                user.AuthSecret = secretKey;
+                _context.SaveChanges();
+            }
+        }
+
+        public string GetAuthKeyForUser(string username)
+        {
+            var user = _context.PersonalAccounts.FirstOrDefault(a => a.Username == username);
+            if(user != null)
+            {
+                return user.AuthSecret;
+            }
+            return string.Empty;
+        }
     }
 }

@@ -74,7 +74,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(12, 271);
+            label2.Location = new Point(12, 307);
             label2.Name = "label2";
             label2.Size = new Size(66, 17);
             label2.TabIndex = 6;
@@ -84,7 +84,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 199);
+            label1.Location = new Point(12, 235);
             label1.Name = "label1";
             label1.Size = new Size(69, 17);
             label1.TabIndex = 5;
@@ -98,7 +98,7 @@
             lblSignUp.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSignUp.LinkBehavior = LinkBehavior.AlwaysUnderline;
             lblSignUp.LinkColor = Color.FromArgb(32, 34, 37);
-            lblSignUp.Location = new Point(123, 454);
+            lblSignUp.Location = new Point(123, 490);
             lblSignUp.Name = "lblSignUp";
             lblSignUp.Size = new Size(89, 13);
             lblSignUp.TabIndex = 4;
@@ -116,7 +116,7 @@
             btnLogin.Font = new Font("Segoe UI", 12F);
             btnLogin.HoverTextColor = Color.FromArgb(48, 49, 51);
             btnLogin.InfoColor = Color.FromArgb(144, 147, 153);
-            btnLogin.Location = new Point(12, 385);
+            btnLogin.Location = new Point(12, 421);
             btnLogin.Name = "btnLogin";
             btnLogin.PrimaryColor = Color.FromArgb(64, 158, 255);
             btnLogin.Size = new Size(310, 40);
@@ -135,7 +135,7 @@
             lblForgotPassword.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblForgotPassword.LinkBehavior = LinkBehavior.HoverUnderline;
             lblForgotPassword.LinkColor = Color.FromArgb(32, 34, 37);
-            lblForgotPassword.Location = new Point(12, 346);
+            lblForgotPassword.Location = new Point(12, 382);
             lblForgotPassword.Name = "lblForgotPassword";
             lblForgotPassword.Size = new Size(130, 20);
             lblForgotPassword.TabIndex = 3;
@@ -152,7 +152,7 @@
             txtPassword.Font = new Font("Segoe UI", 12F);
             txtPassword.ForeColor = Color.FromArgb(48, 49, 51);
             txtPassword.Hint = "";
-            txtPassword.Location = new Point(12, 291);
+            txtPassword.Location = new Point(12, 327);
             txtPassword.MaxLength = 32767;
             txtPassword.Multiline = false;
             txtPassword.Name = "txtPassword";
@@ -175,7 +175,7 @@
             txtUsername.Font = new Font("Segoe UI", 12F);
             txtUsername.ForeColor = Color.FromArgb(48, 49, 51);
             txtUsername.Hint = "";
-            txtUsername.Location = new Point(12, 222);
+            txtUsername.Location = new Point(12, 258);
             txtUsername.MaxLength = 32767;
             txtUsername.Multiline = false;
             txtUsername.Name = "txtUsername";
