@@ -4,6 +4,9 @@
     <Compile Update="Forms\AuthenticateUser.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\PersonalDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>

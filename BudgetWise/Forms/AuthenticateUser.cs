@@ -15,8 +15,7 @@ namespace BudgetWise.Forms
     {
         private readonly string _secretKey;
 
-        public AuthenticateUser() { 
-        }
+        public AuthenticateUser() { }
         public AuthenticateUser(string secretKey)
         {
             InitializeComponent();
@@ -28,7 +27,15 @@ namespace BudgetWise.Forms
             TwoFactorAuthenticator tfA = new TwoFactorAuthenticator(HashType.SHA256);
             var result = tfA.ValidateTwoFactorPIN(_secretKey, txtOneTimePass.Text);
 
-            MessageBox.Show(result ? "Validated!" : "Incorrect", "Result");
+            if(!result )
+            {
+                MessageBox.Show("Invalid Code.", "Incorrect Code", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            this.Close();
+            PersonalDashboard personalDashboard = new PersonalDashboard();
+            personalDashboard.Show();
         }
 
         private void AuthenticateUser_Load(object sender, EventArgs e)
