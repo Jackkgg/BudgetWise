@@ -275,3 +275,5 @@ C:\Work\University\BudgetWise\BudgetWise\bin\Debug\net8.0-windows\Google.Authent
 C:\Work\University\BudgetWise\BudgetWise\bin\Debug\net8.0-windows\QRCoder.dll
 C:\Work\University\BudgetWise\BudgetWise\obj\Debug\net8.0-windows\BudgetWise.Forms.AuthenticateUser.resources
 C:\Work\University\BudgetWise\BudgetWise\obj\Debug\net8.0-windows\BudgetWise.Forms.PersonalDashboard.resources
+C:\Work\University\BudgetWise\BudgetWise\obj\Debug\net8.0-windows\BudgetWise.Forms.EnterIncome.resources
+C:\Work\University\BudgetWise\BudgetWise\obj\Debug\net8.0-windows\BudgetWise.Forms.RegisterAuth.resources

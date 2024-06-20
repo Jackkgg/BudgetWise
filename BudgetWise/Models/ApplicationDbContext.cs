@@ -15,10 +15,13 @@ namespace BudgetWise.Models
         {
             base.OnConfiguring(optionsBuilder);
             string connectionString = ConfigurationManager.ConnectionStrings["AzureDbConnectionString"].ConnectionString;
-            optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.UseSqlServer(connectionString, options => options.EnableRetryOnFailure());
         }
 
         public DbSet<PersonalAccount> PersonalAccounts { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
+        public DbSet<IncomeStream> IncomeStreams { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

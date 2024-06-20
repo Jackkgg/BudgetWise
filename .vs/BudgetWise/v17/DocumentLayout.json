@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Work\\University\\BudgetWise\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|c:\\work\\university\\budgetwise\\budgetwise\\forms\\personaldashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|solutionrelative:budgetwise\\forms\\personaldashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|c:\\work\\university\\budgetwise\\budgetwise\\interfaces\\ipersonaluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|solutionrelative:budgetwise\\interfaces\\ipersonaluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|c:\\work\\university\\budgetwise\\budgetwise\\repositories\\personaluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|solutionrelative:budgetwise\\repositories\\personaluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +31,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PersonalDashboard.cs",
+              "DocumentMoniker": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Forms\\PersonalDashboard.cs",
+              "RelativeDocumentMoniker": "BudgetWise\\Forms\\PersonalDashboard.cs",
+              "ToolTip": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Forms\\PersonalDashboard.cs",
+              "RelativeToolTip": "BudgetWise\\Forms\\PersonalDashboard.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAiwEMAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T21:30:47.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PersonalUserRepository.cs",
+              "DocumentMoniker": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Repositories\\PersonalUserRepository.cs",
+              "RelativeDocumentMoniker": "BudgetWise\\Repositories\\PersonalUserRepository.cs",
+              "ToolTip": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Repositories\\PersonalUserRepository.cs",
+              "RelativeToolTip": "BudgetWise\\Repositories\\PersonalUserRepository.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAAwHEAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T21:28:53.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IPersonalUserRepository.cs",
+              "DocumentMoniker": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Interfaces\\IPersonalUserRepository.cs",
+              "RelativeDocumentMoniker": "BudgetWise\\Interfaces\\IPersonalUserRepository.cs",
+              "ToolTip": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Interfaces\\IPersonalUserRepository.cs",
+              "RelativeToolTip": "BudgetWise\\Interfaces\\IPersonalUserRepository.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T21:28:30.134Z",
+              "EditorCaption": ""
             }
           ]
         }

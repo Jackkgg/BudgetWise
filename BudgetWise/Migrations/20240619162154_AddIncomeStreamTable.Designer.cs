@@ -4,6 +4,7 @@ using BudgetWise.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BudgetWise.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240619162154_AddIncomeStreamTable")]
+    partial class AddIncomeStreamTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,23 +24,6 @@ namespace BudgetWise.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("BudgetWise.Models.Category", b =>
-                {
-                    b.Property<int>("CategoryID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryID"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CategoryID");
-
-                    b.ToTable("Categories");
-                });
 
             modelBuilder.Entity("BudgetWise.Models.IncomeStream", b =>
                 {
@@ -65,7 +51,7 @@ namespace BudgetWise.Migrations
 
                     b.HasIndex("PersonalAccountID");
 
-                    b.ToTable("IncomeStreams");
+                    b.ToTable("IncomeStream");
                 });
 
             modelBuilder.Entity("BudgetWise.Models.PersonalUser.PersonalAccount", b =>
@@ -139,36 +125,6 @@ namespace BudgetWise.Migrations
                     b.ToTable("UserProfiles");
                 });
 
-            modelBuilder.Entity("BudgetWise.Models.Transaction", b =>
-                {
-                    b.Property<int>("TransactionID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionID"));
-
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("CategoryID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PersonalAccountID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Reference")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("TransactionID");
-
-                    b.HasIndex("CategoryID");
-
-                    b.HasIndex("PersonalAccountID");
-
-                    b.ToTable("Transactions");
-                });
-
             modelBuilder.Entity("BudgetWise.Models.IncomeStream", b =>
                 {
                     b.HasOne("BudgetWise.Models.PersonalUser.PersonalAccount", "Account")
@@ -191,38 +147,12 @@ namespace BudgetWise.Migrations
                     b.Navigation("Account");
                 });
 
-            modelBuilder.Entity("BudgetWise.Models.Transaction", b =>
-                {
-                    b.HasOne("BudgetWise.Models.Category", "Category")
-                        .WithMany("Transactions")
-                        .HasForeignKey("CategoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BudgetWise.Models.PersonalUser.PersonalAccount", "Account")
-                        .WithMany("Transactions")
-                        .HasForeignKey("PersonalAccountID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Account");
-
-                    b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("BudgetWise.Models.Category", b =>
-                {
-                    b.Navigation("Transactions");
-                });
-
             modelBuilder.Entity("BudgetWise.Models.PersonalUser.PersonalAccount", b =>
                 {
                     b.Navigation("IncomeStreams");
 
                     b.Navigation("Profile")
                         .IsRequired();
-
-                    b.Navigation("Transactions");
                 });
 #pragma warning restore 612, 618
         }

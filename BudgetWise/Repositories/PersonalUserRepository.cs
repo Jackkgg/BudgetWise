@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic.ApplicationServices;
+using BudgetWise.Models.DTOs;
 
 namespace BudgetWise.Repositories
 {
@@ -66,6 +68,50 @@ namespace BudgetWise.Repositories
                 return user.AuthSecret;
             }
             return string.Empty;
+        }
+
+        public int GetIdByName(string username)
+        {
+            var user = _context.PersonalAccounts.FirstOrDefault(a => a.Username == username);
+            if (user != null)
+                return user.PersonalAccountID;
+
+            return -1;
+        }
+
+        public void AddIncome(IncomeStream income)
+        {
+            _context.IncomeStreams.Add(income);
+            _context.SaveChanges();
+        }
+
+        public PersonalAccount GetUserById(int id)
+        {
+            var user = _context.PersonalAccounts.FirstOrDefault(a => a.PersonalAccountID == id);
+            if (user != null)
+                return user;
+
+            return null;
+        }
+
+        public List<DisplayIncomeDTO> GetIncomeForUser(int id)
+        {
+            return _context.IncomeStreams
+                           .Where(income => income.PersonalAccountID == id)
+                           .Select(income => new DisplayIncomeDTO
+                           {
+                               Name = income.Name,
+                               Amount = income.Amount,
+                               Type = income.Type
+                           })
+                           .ToList();
+        }
+
+        public decimal GetBudgetForUser(int id)
+        {
+            return _context.IncomeStreams
+                           .Where(i => i.PersonalAccountID == id)
+                           .Sum(i => i.Amount);
         }
     }
 }

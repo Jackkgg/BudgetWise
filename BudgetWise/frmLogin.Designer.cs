@@ -37,6 +37,7 @@
             lblForgotPassword = new ReaLTaiizor.Controls.LinkLabelEdit();
             txtPassword = new ReaLTaiizor.Controls.HopeTextBox();
             txtUsername = new ReaLTaiizor.Controls.HopeTextBox();
+            lblError = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -56,6 +57,7 @@
             // panel1
             // 
             panel1.BackColor = Color.LightCyan;
+            panel1.Controls.Add(lblError);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(lblSignUp);
@@ -189,6 +191,18 @@
             txtUsername.TabStop = false;
             txtUsername.UseSystemPasswordChar = false;
             // 
+            // lblError
+            // 
+            lblError.AutoSize = true;
+            lblError.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblError.ForeColor = Color.Red;
+            lblError.Location = new Point(55, 527);
+            lblError.Name = "lblError";
+            lblError.Size = new Size(222, 17);
+            lblError.TabIndex = 7;
+            lblError.Text = "Username or password is incorrect!";
+            lblError.Visible = false;
+            // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -218,5 +232,6 @@
         private ReaLTaiizor.Controls.HopeRoundButton btnLogin;
         private Label label2;
         private Label label1;
+        private Label lblError;
     }
 }

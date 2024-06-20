@@ -16,5 +16,8 @@ namespace BudgetWise.Models.PersonalUser
         public string Salt { get; set; }
         public string AuthSecret {  get; set; }
         public UserProfile Profile { get; set; }
+
+        public ICollection<IncomeStream> IncomeStreams { get; set; }
+        public ICollection<Transaction> Transactions { get; set; }
     }
 }

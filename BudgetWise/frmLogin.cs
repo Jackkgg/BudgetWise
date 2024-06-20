@@ -14,7 +14,7 @@ namespace BudgetWise
 {
     public partial class frmLogin : Form
     {
-        private readonly IPersonalUserRepository _personalUserRepository;
+        private readonly Interfaces.IPersonalUserRepository _personalUserRepository;
 
         public frmLogin()
         {
@@ -36,16 +36,25 @@ namespace BudgetWise
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            var username = txtUsername.Text;
+            //Gets auth key
             var key = _personalUserRepository.GetAuthKeyForUser(txtUsername.Text);
             AuthenticateUser authenticateUser = new AuthenticateUser(key);
-            if (_personalUserRepository.PersonalLogin(txtUsername.Text, txtPassword.Text))
+
+            //if login was successful authenticate user
+            if (!_personalUserRepository.PersonalLogin(txtUsername.Text, txtPassword.Text))
             {
-                authenticateUser.Show();
+                lblError.Visible = true;
+                return;
             }
-            else
+
+            if(authenticateUser.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Account not found!");
+                this.Hide();
+                PersonalDashboard personalDashboard = new PersonalDashboard(_personalUserRepository.GetIdByName(username));
+                personalDashboard.ShowDialog();
             }
+            
         }
     }
 }

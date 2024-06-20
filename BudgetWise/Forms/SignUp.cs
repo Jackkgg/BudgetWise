@@ -29,7 +29,7 @@ namespace BudgetWise.Forms
             personalPanel.Visible = true;
             businessPanel.Visible = false;
 
-            _personalUserRepository = new PersonalUserRepository(new ApplicationDbContext());
+            _personalUserRepository = new Repositories.PersonalUserRepository(new ApplicationDbContext());
             _hashing = new Hashing(new Argon2Hash());
             _login = login;
         }
@@ -94,11 +94,12 @@ namespace BudgetWise.Forms
                 return;
             }
 
-            Authentication authentication = new Authentication(_personalUserRepository);
-            authentication.AddKeyOnSignUp(account.Username);
-
-            this.Close();
-            _login.Show();
+            RegisterAuth registerAuth = new RegisterAuth(txtUsername.Text);
+            if(registerAuth.ShowDialog() == DialogResult.OK)
+            {
+                this.Close();
+                _login.Show();
+            }            
         }
 
         private bool ValidateInput(string email, string phone, string password)

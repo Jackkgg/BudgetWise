@@ -33,9 +33,8 @@ namespace BudgetWise.Forms
                 return;
             }
 
+            this.DialogResult = DialogResult.OK;
             this.Close();
-            PersonalDashboard personalDashboard = new PersonalDashboard();
-            personalDashboard.Show();
         }
 
         private void AuthenticateUser_Load(object sender, EventArgs e)
