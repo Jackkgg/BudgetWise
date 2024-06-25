@@ -78,6 +78,14 @@
             "ReaLTaiizor": {
               "target": "Package",
               "version": "[3.8.0.5, )"
+            },
+            "ScottPlot": {
+              "target": "Package",
+              "version": "[5.0.35, )"
+            },
+            "ScottPlot.WinForms": {
+              "target": "Package",
+              "version": "[5.0.35, )"
             }
           },
           "imports": [

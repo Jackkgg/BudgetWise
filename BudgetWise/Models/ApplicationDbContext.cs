@@ -23,5 +23,6 @@ namespace BudgetWise.Models
         public DbSet<IncomeStream> IncomeStreams { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Targets> Targets { get; set; }
     }
 }

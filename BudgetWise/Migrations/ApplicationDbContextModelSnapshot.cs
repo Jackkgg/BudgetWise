@@ -139,6 +139,33 @@ namespace BudgetWise.Migrations
                     b.ToTable("UserProfiles");
                 });
 
+            modelBuilder.Entity("BudgetWise.Models.Targets", b =>
+                {
+                    b.Property<int>("TargetID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TargetID"));
+
+                    b.Property<decimal>("Future")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Luxuries")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Necessities")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("PersonalAccountID")
+                        .HasColumnType("int");
+
+                    b.HasKey("TargetID");
+
+                    b.HasIndex("PersonalAccountID");
+
+                    b.ToTable("Targets");
+                });
+
             modelBuilder.Entity("BudgetWise.Models.Transaction", b =>
                 {
                     b.Property<int>("TransactionID")
@@ -152,6 +179,9 @@ namespace BudgetWise.Migrations
 
                     b.Property<int>("CategoryID")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("DateEntered")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("PersonalAccountID")
                         .HasColumnType("int");
@@ -185,6 +215,17 @@ namespace BudgetWise.Migrations
                     b.HasOne("BudgetWise.Models.PersonalUser.PersonalAccount", "Account")
                         .WithOne("Profile")
                         .HasForeignKey("BudgetWise.Models.PersonalUser.UserProfile", "PersonalAccountID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Account");
+                });
+
+            modelBuilder.Entity("BudgetWise.Models.Targets", b =>
+                {
+                    b.HasOne("BudgetWise.Models.PersonalUser.PersonalAccount", "Account")
+                        .WithMany()
+                        .HasForeignKey("PersonalAccountID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

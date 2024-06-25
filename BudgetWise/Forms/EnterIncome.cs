@@ -29,7 +29,7 @@ namespace BudgetWise.Forms
         {
             AddIncome();
             this.Close();
-            PersonalDashboard personalDashboard = new PersonalDashboard();
+            PersonalDashboard personalDashboard = new PersonalDashboard(_id);
             personalDashboard.Show();
         }
 

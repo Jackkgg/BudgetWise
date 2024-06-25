@@ -7,12 +7,20 @@
       "RelativeMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|solutionrelative:budgetwise\\forms\\personaldashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|c:\\work\\university\\budgetwise\\budgetwise\\interfaces\\ipersonaluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|solutionrelative:budgetwise\\interfaces\\ipersonaluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|c:\\work\\university\\budgetwise\\budgetwise\\repositories\\personaluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|solutionrelative:budgetwise\\repositories\\personaluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|c:\\work\\university\\budgetwise\\budgetwise\\models\\targets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|solutionrelative:budgetwise\\models\\targets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|C:\\Work\\University\\BudgetWise\\budgetwise\\forms\\personaldashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|solutionrelative:budgetwise\\forms\\personaldashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|c:\\work\\university\\budgetwise\\budgetwise\\forms\\setgoals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32FEB25-DD65-421A-957E-80022CD237E3}|BudgetWise\\BudgetWise.csproj|solutionrelative:budgetwise\\forms\\setgoals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,42 +42,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Targets.cs",
+              "DocumentMoniker": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Models\\Targets.cs",
+              "RelativeDocumentMoniker": "BudgetWise\\Models\\Targets.cs",
+              "ToolTip": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Models\\Targets.cs",
+              "RelativeToolTip": "BudgetWise\\Models\\Targets.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T22:01:33.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PersonalUserRepository.cs",
+              "DocumentMoniker": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Repositories\\PersonalUserRepository.cs",
+              "RelativeDocumentMoniker": "BudgetWise\\Repositories\\PersonalUserRepository.cs",
+              "ToolTip": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Repositories\\PersonalUserRepository.cs",
+              "RelativeToolTip": "BudgetWise\\Repositories\\PersonalUserRepository.cs",
+              "ViewState": "AQIAANEAAAAAAAAAAADgv+AAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T21:42:36.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SetGoals.cs",
+              "DocumentMoniker": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Forms\\SetGoals.cs",
+              "RelativeDocumentMoniker": "BudgetWise\\Forms\\SetGoals.cs",
+              "ToolTip": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Forms\\SetGoals.cs",
+              "RelativeToolTip": "BudgetWise\\Forms\\SetGoals.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABcAAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T21:39:11.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "PersonalDashboard.cs",
               "DocumentMoniker": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Forms\\PersonalDashboard.cs",
               "RelativeDocumentMoniker": "BudgetWise\\Forms\\PersonalDashboard.cs",
               "ToolTip": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Forms\\PersonalDashboard.cs",
               "RelativeToolTip": "BudgetWise\\Forms\\PersonalDashboard.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAiwEMAAAAnAAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAwwHgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T21:30:47.389Z",
+              "WhenOpened": "2024-06-22T15:51:40.58Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PersonalUserRepository.cs",
-              "DocumentMoniker": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Repositories\\PersonalUserRepository.cs",
-              "RelativeDocumentMoniker": "BudgetWise\\Repositories\\PersonalUserRepository.cs",
-              "ToolTip": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Repositories\\PersonalUserRepository.cs",
-              "RelativeToolTip": "BudgetWise\\Repositories\\PersonalUserRepository.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAAwHEAAAAvAAAA",
+              "DocumentIndex": 3,
+              "Title": "PersonalDashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Forms\\PersonalDashboard.cs",
+              "RelativeDocumentMoniker": "BudgetWise\\Forms\\PersonalDashboard.cs",
+              "ToolTip": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Forms\\PersonalDashboard.cs [Design]",
+              "RelativeToolTip": "BudgetWise\\Forms\\PersonalDashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T21:28:53.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IPersonalUserRepository.cs",
-              "DocumentMoniker": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Interfaces\\IPersonalUserRepository.cs",
-              "RelativeDocumentMoniker": "BudgetWise\\Interfaces\\IPersonalUserRepository.cs",
-              "ToolTip": "C:\\Work\\University\\BudgetWise\\BudgetWise\\Interfaces\\IPersonalUserRepository.cs",
-              "RelativeToolTip": "BudgetWise\\Interfaces\\IPersonalUserRepository.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T21:28:30.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T15:48:56.644Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
